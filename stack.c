@@ -10,10 +10,12 @@ int push(){
           printf("stack is full \n");
         }else{
           printf("enter value: ");
-          scanf("%d", &stack[top]);
+          scanf("%d", &val);
           top++;
-        };
+          stack[top] = val;
+        }
         printf("\n");
+        return 0;
 }
 
 //display
@@ -21,11 +23,12 @@ int display(){
     if(top == -1){
         printf("empty stack; \n");
     }else{
-        for(i=-1;i<top;i++){
+        for(i = 0; i <= top; i++){
             printf("%d \n", stack[i]);
         }
         printf("\n");
     }
+    return 0;
 }
 
 //pop
